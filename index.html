@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Matrices for Game Developers</title>
+	<!-- <link rel="stylesheet" href="main.css"> -->
+			<!-- We got style -->
+	<style>
+		:root {
+			--colorX:#ff6959;
+			--colorY:#77ff59;
+			--colorZ:#59b7ff;
+			--colorT:#a659ff;
+			--colorH:#fffc59;
+			--blackness:#181818;
+			--whiteness:#F0F0F0;
+		}
+
+		body {
+			background-color:var(--blackness);
+			color:#2E9FFF;
+			font-family: sans-serif;
+		}
+
+		table {
+			font-family: monospace;
+			font-size: 2.5rem;
+			/*transform: scale(-1);*/
+			/*transform: rotate(90deg);*/
+			border-spacing:1.0rem;
+			/* animation:spin 4s linear infinite; For fun spin effect */
+		}
+
+		input {
+			background-color:var(--blackness);
+			color:var(--whiteness);
+			font-size: 1.25rem;
+			width: 5rem;
+			border-width:5px;
+			border-style:solid;
+			margin-left:15px;
+			padding:5px;
+		}
+
+		.inputX {
+			border-color:var(--colorX);
+		}
+
+		.inputY {
+			border-color:var(--colorY);
+		}
+
+		.inputZ {
+			border-color:var(--colorZ);
+		}
+
+		.inputT {
+			border-color:var(--colorT);
+		}
+
+		.inputH {
+			border-color:var(--colorH);
+		}
+
+		/* @keyframes spin { 100% { transform:rotate(360deg); } } For fun spin effect */
+
+		.basisX {
+			color:var(--colorX);
+		}
+		.basisY {
+			color:var(--colorY);
+		}
+		.basisZ {
+			color:var(--colorZ);
+		}
+		.basisT {
+			color:var(--colorT);
+		}
+		.homogenous {
+			color:var(--colorH);
+		}
+	</style>
+</head>
+
+<body>
+<h1>Matrices for Game Developers</h1>
+
+<h3>Warning:</h3>
+<p>Matrices are extremely dangerous tools. Consider it the skill-saw of game dev math. If you don't know how to use it, it will chop off your limbs. Or just srammble your brain.</p>
+
+<h2>Matrix 'A' Data:</h2>
+<table>
+	<tr>
+		<td><span class="basisX">Xx</span><input class="inputX" id="dataXx" placeholder="Xx" value="1" type="number"></td>
+		<td><span class="basisY">Yx</span><input class="inputY" id="dataYx" placeholder="Yx" value="0" type="number"></td>
+		<td><span class="basisZ">Zx</span><input class="inputZ" id="dataZx" placeholder="Zx" value="0" type="number"></td>
+		<td><span class="basisT">Tx</span><input class="inputT" id="dataTx" placeholder="Tx" value="0" type="number"></td>
+	</tr>
+	<tr>
+		<td><span class="basisX">Xy</span><input class="inputX" id="dataXy" placeholder="Xy" value="0" type="number"></td>
+		<td><span class="basisY">Yy</span><input class="inputY" id="dataYy" placeholder="Yy" value="1" type="number"></td>
+		<td><span class="basisZ">Zy</span><input class="inputZ" id="dataZy" placeholder="Zy" value="0" type="number"></td>
+		<td><span class="basisT">Ty</span><input class="inputT" id="dataTy" placeholder="Ty" value="0" type="number"></td>
+	</tr>
+	<tr>
+		<td><span class="basisX">Xz</span><input class="inputX" id="dataXz" placeholder="Xz" value="0" type="number"></td>
+		<td><span class="basisY">Yz</span><input class="inputY" id="dataYz" placeholder="Yz" value="0" type="number"></td>
+		<td><span class="basisZ">Zz</span><input class="inputZ" id="dataZz" placeholder="Zz" value="1" type="number"></td>
+		<td><span class="basisT">Tz</span><input class="inputT" id="dataTz" placeholder="Tz" value="0" type="number"></td>
+	</tr>
+	<tr>
+		<td><span class="homogenous">HX</span><input class="inputH" id="dataHX" placeholder="HX" value="0" type="number"></td>
+		<td><span class="homogenous">HY</span><input class="inputH" id="dataHY" placeholder="HY" value="0" type="number"></td>
+		<td><span class="homogenous">HZ</span><input class="inputH" id="dataHZ" placeholder="HZ" value="0" type="number"></td>
+		<td><span class="homogenous">HT</span><input class="inputH" id="dataHT" placeholder="HT" value="1" type="number"></td>
+	</tr>
+</table>
+
+
+<table>
+	<tr>
+		<td><span class="basisX">Xx</span></td>
+		<td><span class="basisY">Yx</span></td>
+		<td><span class="basisZ">Zx</span></td>
+		<td><span class="basisT">Tx</span></td>
+	</tr>
+
+	<tr>
+		<td><span class="basisX">Xy</span></td>
+		<td><span class="basisY">Yy</span></td>
+		<td><span class="basisZ">Zy</span></td>
+		<td><span class="basisT">Ty</span></td>
+	</tr>
+
+	<tr>
+		<td><span class="basisX">Xz</span></td>
+		<td><span class="basisY">Yz</span></td>
+		<td><span class="basisZ">Zz</span></td>
+		<td><span class="basisT">Tz</span></td>
+	</tr>
+
+	<tr>
+		<td><span class="homogenous">HX</span></td>
+		<td><span class="homogenous">HY</span></td>
+		<td><span class="homogenous">HZ</span></td>
+		<td><span class="homogenous">HT</span></td>
+	</tr>
+</table>
+
+
+</body>
+</html>
